@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: fasolevy-baron
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    disk:
+      name: bean-baron-data
+      mountPath: /data
+      sizeGB: 1
